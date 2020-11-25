@@ -1,5 +1,4 @@
-\documentclass[journal]{IEEEtran}
-\usepackage[caption=false,font=footnotesize]{subfig}
+\documentclass{article}
 \usepackage{booktabs}
 \usepackage{datatool}
 \usepackage{graphicx}
@@ -7,7 +6,7 @@
 \begin{document}
 \DTLloaddb{keys_values}{results/keys-values.csv}
 
-\title{Docker as a Development Environment for Research Papers Template}
+\title{Docker as a Development Environment for Documenting Results Template}
 
 \author{First author
 \thanks{First author is with Affiliation, Town, Country e-mail: first@author.com}}
@@ -37,6 +36,6 @@ This is a citation~\cite{author2000title}.
 	\input{results/table.tex}
 \end{table}
 
-\bibliography{ms}
-\bibliographystyle{IEEEtran}
+\bibliography{ms.bib}
+\bibliographystyle{plain}
 \end{document}
