@@ -9,8 +9,6 @@ from matplotlib import pyplot as plt
 if __name__ == '__main__':
     # DO NOT EDIT BLOCK - Required by the Makefile
     parser = argparse.ArgumentParser()
-    parser.add_argument('results_dir')
-    parser.add_argument('tmp_dir')
     parser.add_argument('--full', default=False, action='store_true')
     args = parser.parse_args()
     # END OF DO NOT EDIT BLOCK
@@ -35,7 +33,7 @@ if __name__ == '__main__':
     plt.grid(True)
     plt.autoscale(enable=True, axis='x', tight=True)
     plt.title('Random data')
-    plt.savefig(f'{args.results_dir}/image')
+    plt.savefig('tmp/image.png')
     plt.close()
 
     # Create table.
@@ -45,8 +43,8 @@ if __name__ == '__main__':
     df = pd.DataFrame(table)
     max_per_column_list = df.max(0)
     formatters = [lambda x,max_per_column=max_per_column: fr'\bf{{{x:.2f}}}' if (x == max_per_column) else f'{x:.2f}' for max_per_column in max_per_column_list]
-    df.to_latex(f'{args.results_dir}/table.tex', formatters=formatters, bold_rows=True, escape=False)
+    df.to_latex('tmp/table.tex', formatters=formatters, bold_rows=True, escape=False)
 
     # Create variables.
     df = pd.DataFrame({'key': ['num_samples', 'num_rows', 'num_columns'], 'value': [num_samples, num_rows, num_columns]})
-    df.to_csv(f'{args.results_dir}/keys-values.csv', index=False, float_format='%.1f')
+    df.to_csv('tmp/keys-values.csv', index=False, float_format='%.1f')
