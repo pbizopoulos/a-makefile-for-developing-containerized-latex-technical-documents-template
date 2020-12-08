@@ -1,5 +1,5 @@
 [![template](http://img.shields.io/badge/template-EEE0B1.svg)](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template)
-[![test-local-reproducibility](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/workflows/test-local-reproducibility/badge.svg)](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/actions?query=workflow%3Atest-local-reproducibility)
+[![test-fast-draft-reproducibility](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/workflows/test-fast-draft-reproducibility/badge.svg)](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/actions?query=workflow%3Atest-fast-draft-reproducibility)
 
 # LaTeX Technical Documents with Docker and Make Template
 This repository contains the code that generates **LaTeX Technical Documents with Docker and Make Template**.
@@ -12,7 +12,7 @@ This repository contains the code that generates **LaTeX Technical Documents wit
 
 ## Instructions
 1. `git clone https://github.com/{user}/latex-technical-documents-with-docker-and-make-template`
-2. `cd latex-technical-documents-with-docker-and-make-template`
+2. `cd latex-technical-documents-with-docker-and-make-template/`
 3. `sudo systemctl start docker`
 4. make options
     * `make`             # Generate the fast/draft version document.
