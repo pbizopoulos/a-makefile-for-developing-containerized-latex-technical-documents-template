@@ -1,7 +1,6 @@
 import argparse
 import numpy as np
 import pandas as pd
-import torch
 
 from matplotlib import pyplot as plt
 
@@ -15,10 +14,6 @@ if __name__ == '__main__':
 
     # Set random seeds for reproducibility.
     np.random.seed(0)
-    torch.backends.cudnn.benchmark = False
-    torch.backends.cudnn.deterministic = True
-    torch.cuda.manual_seed_all(0)
-    torch.manual_seed(0)
 
     # Add appropriate variables such as num_samples and num_epochs to construct the debug build.
     if args.full:
@@ -27,7 +22,7 @@ if __name__ == '__main__':
         num_samples = 20
 
     # Create pdf images.
-    data = torch.randn(num_samples)
+    data = np.random.randn(num_samples)
     plt.figure(constrained_layout=True, figsize=(6, 2))
     plt.plot(data)
     plt.grid(True)
