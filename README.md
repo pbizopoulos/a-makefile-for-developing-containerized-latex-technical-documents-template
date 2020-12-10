@@ -1,5 +1,5 @@
 [![template](http://img.shields.io/badge/template-EEE0B1.svg)](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template)
-[![test-fast-draft-reproducibility](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/workflows/test-fast-draft-reproducibility/badge.svg)](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/actions?query=workflow%3Atest-fast-draft-reproducibility)
+[![test-draft-version-document-reproducibility](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/workflows/test-draft-version-document-reproducibility/badge.svg)](https://github.com/pbizopoulos/latex-technical-documents-with-docker-and-make-template/actions?query=workflow%3Atest-draft-version-document-reproducibility)
 
 # LaTeX Technical Documents with Docker and Make Template
 This repository contains the code that generates **LaTeX Technical Documents with Docker and Make Template**.
@@ -15,6 +15,6 @@ This repository contains the code that generates **LaTeX Technical Documents wit
 2. `cd latex-technical-documents-with-docker-and-make-template/`
 3. `sudo systemctl start docker`
 4. make options
-    * `make`             # Generate the fast/draft version document.
-    * `make ARG=--full`  # Generate the slow/final version document.
-    * `make clean`       # Remove the tmp directory.
+    * `make`             # Generate the draft (fast) version document.
+    * `make ARG=--full`  # Generate the full (slow) version document.
+    * `make clean`       # Remove the tmp/ directory.
