@@ -1,6 +1,6 @@
 .POSIX:
 
-document_title=latex-technical-documents-with-docker-and-make-template
+document_title=a-makefile-for-developing-containerized-latex-technical-documents-template
 
 ifeq (1, $(shell [ -t 0 ] && echo 1))
 	debug_args=--interactive --tty
